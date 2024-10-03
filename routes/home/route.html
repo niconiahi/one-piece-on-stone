@@ -1,0 +1,12 @@
+{{ block "content" . }}
+<template shadowrootmode="open">
+  <style>
+    main {
+      background-color: plum;
+    }
+  </style>
+  <main>
+    <h1>{{ .Loader.Message }}</h1>
+  </main>
+</template>
+{{ end }}
