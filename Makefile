@@ -8,6 +8,3 @@ build:
 
 migrate:
 	goose up
-
-migrate-local:
-	goose up

@@ -5,21 +5,14 @@ import (
 	"fmt"
 	"os"
 
-	_ "github.com/tursodatabase/libsql-client-go/libsql"
+	_ "modernc.org/sqlite"
 )
 
 func GetDatabase() *sql.DB {
-	url := fmt.Sprintf(
-		"%s?authToken=%s",
-		os.Getenv("TURSO_DATABASE_URL"),
-		os.Getenv("TURSO_AUTH_TOKEN"),
-	)
-
-	db, err := sql.Open("libsql", url)
+	db, err := sql.Open("sqlite", "./database/main.sqlite")
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "failed to open db %s: %s", url, err)
+		fmt.Fprintf(os.Stderr, "failed to open db")
 		os.Exit(1)
 	}
-
 	return db
 }

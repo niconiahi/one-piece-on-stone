@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/niconiahi/gig.dance/routes/home"
+	"github.com/niconiahi/one-piece-on-stone/routes/home"
 )
 
 func main() {
