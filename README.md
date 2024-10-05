@@ -1,4 +1,4 @@
-# gig.dance
+# one-piece-on-stone
 
 - `make dev` to start development environment
 - `make build` to build the application
