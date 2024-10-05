@@ -9,10 +9,10 @@ import (
 )
 
 func GetDatabase() *sql.DB {
-	db, err := sql.Open("sqlite", "./database/main.sqlite")
+	d, err := sql.Open("sqlite", "./database/main.sqlite")
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "failed to open db")
 		os.Exit(1)
 	}
-	return db
+	return d
 }

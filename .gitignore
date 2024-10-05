@@ -1,3 +1,4 @@
 .env
 gig.dance
 Makefile.local
+database
